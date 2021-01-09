@@ -1,4 +1,4 @@
-package com;
+package com.mvc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 
 @Configuration
-@PropertySource(value = "classpath:application.properties", ignoreResourceNotFound = false)
+@PropertySource(value = "classpath:application.properties")
 public class AppConfig {
 
     @Autowired

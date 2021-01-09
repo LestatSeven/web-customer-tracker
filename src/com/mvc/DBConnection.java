@@ -1,4 +1,4 @@
-package com;
+package com.mvc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,15 +18,20 @@ public class DBConnection {
         this.pass = pass;
     }
 
-    public Connection getConnection() throws ClassNotFoundException, SQLException {
+    public Connection getConnection() {
         if (this.connection != null) {
             return connection;
         }
 
-        System.out.println("Creating DB Connection");
-        Class.forName(driverClass);
-        Connection connection = DriverManager.getConnection(URL, user, pass);
-        System.out.println("Successfully Created DB Connection");
+        Connection connection = null;
+        try {
+            System.out.println("Creating DB Connection");
+            Class.forName(driverClass);
+            connection = DriverManager.getConnection(URL, user, pass);
+            System.out.println("Successfully Created DB Connection");
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
         this.connection = connection;
         return connection;
     }
