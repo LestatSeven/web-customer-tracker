@@ -5,8 +5,8 @@
   <absolute-ordering />
 
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>/WEB-INF/view/index.jsp</welcome-file>
+    <welcome-file>/WEB-INF/view/index.html</welcome-file>
   </welcome-file-list>
 
   <servlet>

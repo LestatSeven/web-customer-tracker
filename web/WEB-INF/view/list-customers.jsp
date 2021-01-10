@@ -4,6 +4,8 @@
 <html>
 <head>
     <title>List Customers</title>
+    <script src="${pageContext.request.contextPath}/assets/js/index.js"></script>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
 </head>
 <body>
     <h2>List customers...</h2>
